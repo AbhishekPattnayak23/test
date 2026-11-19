@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: #006D77;
+    --secondary-color: #EDB753;
+    --background-color: #FFFFFF;
+    --surface-color: #F8F9FA;
+    --text-primary: #1A1A1A;
+    --text-secondary: #666666;
+    --text-disabled: #9E9E9E;
+    --border-color: #E0E0E0;
+    --error-color: #D32F2F;
+    --warning-color: #ED6C02;
+    --success-color: #2E7D32;
+    --info-color: #0288D1;
+  }
+
+  body {
+    @apply bg-background text-text-primary antialiased;
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg border border-border shadow-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-600 focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A0AEC0;
+}
